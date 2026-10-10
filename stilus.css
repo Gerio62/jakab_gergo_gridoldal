@@ -1,0 +1,93 @@
+main,
+header,
+footer,
+article,
+aside,
+nav {
+  border: 1px solid rgb(211, 221, 215);
+  padding: 1px;
+  display: grid;
+  border-radius: 1%;
+}
+nav ul a {
+  color: yellow;
+  text-decoration: none;
+}
+body {
+  background-color: black;
+  text-align: justify;
+  color: aliceblue;
+}
+p {
+  text-align: justify;
+  color: antiquewhite;
+}
+nav ul {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+  list-style-type: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas:
+    "h h h"
+    "n n n"
+    "asb ar asj"
+    "fo fo fo";
+}
+
+header {
+  grid-area: h;
+}
+footer {
+  grid-area: fo;
+}
+article {
+  grid-area: ar;
+}
+
+nav {
+  grid-area: n;
+}
+.jobb {
+  grid-area: asj;
+}
+.bal {
+  grid-area: asb;
+}
+nav ul li:hover {
+  padding: 10px;
+  background-color: rgb(26, 86, 139);
+}
+nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 0;
+  list-style-type: none;
+}
+article{
+    text-align: justify;
+}
+.arti {
+  border: solid rgb(75, 69, 39);
+  padding: 1px;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    grid-template-columns: 1fr;
+  }
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "n"
+      "ar"
+      "asb"
+      "asj"
+      "fo";
+  }
+}
